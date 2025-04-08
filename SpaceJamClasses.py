@@ -173,10 +173,10 @@ class Wanderer(SphereCollideObject):
         self.travelRoute.loop()
 
 
-class Wanderer2(SphereCollideObject):
+class AltWanderer(SphereCollideObject):
     numWanderers = 0
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName: str, scaleVec: Vec3, texPath: str, staringAt: Vec3):
-        super(Wanderer2, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 3.2)
+        super(AltWanderer, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 3.2)
 
         self.modelNode.setScale(scaleVec)
         tex = loader.loadTexture(texPath)
@@ -187,7 +187,7 @@ class Wanderer2(SphereCollideObject):
 
         posInterval0 = self.modelNode.posInterval(30, Vec3(50, 4000, 250), startPos = Vec3(0,0,0))
         posInterval1 = self.modelNode.posInterval(30, Vec3(350, -1700, 250), startPos = Vec3(600, 1500, 750))
-        posInterval2 = self.modelNode.posInterval(30, Vec3(-10, -250, -2000), startPos = Vec3(150,-1000,300))
+        posInterval2 = self.modelNode.posInterval(30, Vec3(-10, -250, -1400), startPos = Vec3(150,-1000,300))
 
         self.travelRoute = Sequence(posInterval0, posInterval1, posInterval2, name = "Traveler2")
 

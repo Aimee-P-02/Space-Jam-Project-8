@@ -86,7 +86,7 @@ class MyApp(ShowBase):
         self.Sentinal3 = spaceJamClasses.Orbiter(self.loader, self.taskMgr, "./Assets/DroneDefender/DroneDefender.obj", self.render, "Drone", 7.0, "./Assets/DroneDefender/octotoad1_auv.png", self.Planet5, 400, "MLB", self.spaceShip)
         self.Sentinal4 = spaceJamClasses.Orbiter(self.loader, self.taskMgr,"./Assets/DroneDefender/DroneDefender.obj", self.render, "Drone", 7.0, "./Assets/DroneDefender/octotoad1_auv.png", self.Planet3, 400, "Cloud", self.spaceShip)
         self.Wanderer1 = spaceJamClasses.Wanderer(self.loader, "./Assets/DroneDefender/DroneDefender.obj", self.render, "Drone", 6.8, "./Assets/DroneDefender/octotoad1_auv.png", self.spaceShip)
-        self.Wanderer2 = spaceJamClasses.Wanderer2(self.loader, "./Assets/DroneDefender/DroneDefender.obj", self.render, "Drone", 6.8, "./Assets/DroneDefender/octotoad1_auv.png", self.spaceShip)
+        self.Wanderer2 = spaceJamClasses.AltWanderer(self.loader, "./Assets/DroneDefender/DroneDefender.obj", self.render, "Drone", 6.8, "./Assets/DroneDefender/octotoad1_auv.png", self.spaceShip)
     def drawBaseBallSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)
         unitVec.normalize()
