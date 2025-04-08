@@ -187,7 +187,7 @@ class AltWanderer(SphereCollideObject):
 
         posInterval0 = self.modelNode.posInterval(30, Vec3(50, 4000, 250), startPos = Vec3(0,0,0))
         posInterval1 = self.modelNode.posInterval(30, Vec3(350, -1700, 250), startPos = Vec3(600, 1500, 750))
-        posInterval2 = self.modelNode.posInterval(30, Vec3(-10, -250, -1400), startPos = Vec3(150,-1000,300))
+        posInterval2 = self.modelNode.posInterval(45, Vec3(-10, -250, -1700), startPos = Vec3(150,-1000,300))
 
         self.travelRoute = Sequence(posInterval0, posInterval1, posInterval2, name = "Traveler2")
 
